@@ -77,8 +77,8 @@ def covid_27():
     plt.title("Distribution Plot for Active Cases over Date")
     plt.xticks(rotation=90)
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot27.png')
-    return render_template('images.html', name = 'Number of Active Cases Over Date', url ='static\\images\\new_plot27.png')
+    plt.savefig('static/images/new_plot27.png')
+    return render_template('images.html', name = 'Number of Active Cases Over Date', url ='static/images/new_plot27.png')
 
 @app.route("/", methods=['GET'])
 def bye():
@@ -91,8 +91,8 @@ def covid_28():
     plt.title("Distribution Plot for Closed Cases over Date")
     plt.xticks(rotation=90)
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot28.png')
-    return render_template('images.html', name = 'Number of Active Cases Over Date', url ='static\\images\\new_plot28.png')
+    plt.savefig('static/images/new_plot28.png')
+    return render_template('images.html', name = 'Number of Active Cases Over Date', url ='static/images/new_plot28.png')
 
 
 datewise["WeekOfYear"]=datewise.index.weekofyear
@@ -118,8 +118,8 @@ def covid_29():
     plt.xlabel("Week Number")
     plt.title("Weekly progress of Different Types of Cases")
     plt.xlabel
-    plt.savefig('static\\images\\new_plot29.png')
-    return render_template('images.html', name = 'Weekwise Analysis of Confirmed, Death and Recovered Cases', url ='static\\images\\new_plot29.png')
+    plt.savefig('static/images/new_plot29.png')
+    return render_template('images.html', name = 'Weekwise Analysis of Confirmed, Death and Recovered Cases', url ='static/images/new_plot29.png')
 
 
 
@@ -138,8 +138,8 @@ def covid_30():
     ax1.set_title("Weekly increase in Number of Confirmed Cases")
     ax2.set_title("Weekly increase in Number of Death Cases")
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot30.png')
-    return render_template('images.html', name = 'Weekwise Aanlysis of Increase in Number of Confirmed and Death Cases', url ='static\\images\\new_plot30.png')
+    plt.savefig('static/images/new_plot30.png')
+    return render_template('images.html', name = 'Weekwise Aanlysis of Increase in Number of Confirmed and Death Cases', url ='static/images/new_plot30.png')
 
 
 
@@ -177,8 +177,8 @@ def covid_1():
        plt.subplot(313)
        plot_new('Active','Active cases top 15 countries')
        plt.savefig(img)
-       plt.savefig('static\\images\\new_plot1.png')
-       return render_template('images.html', name = 'Confirmed,Deaths and Active cases for Top 15 countries', url ='static\\images\\new_plot1.png')
+       plt.savefig('static/images/new_plot1.png')
+       return render_template('images.html', name = 'Confirmed,Deaths and Active cases for Top 15 countries', url ='static/images/new_plot1.png')
 
 def plot_rate(rank, title):
     if rank == 'highest':
@@ -223,8 +223,8 @@ def covid_2():
     plot_evo((1,0), 'Active', 'Active cases')
     plot_evo((1,1), 'Death Rate', 'Death rate')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot2.png')
-    return render_template('images.html', name = 'Evolution of Cases in the world over time', url ='static\\images\\new_plot2.png')
+    plt.savefig('static/images/new_plot2.png')
+    return render_template('images.html', name = 'Evolution of Cases in the world over time', url ='static/images/new_plot2.png')
 
 
 def plot_cty(num, evo_col, title):
@@ -265,8 +265,8 @@ def covid_3():
     plot_evo((1,0), 'Active', 'Active cases')
     plot_evo((1,1), 'Death Rate', 'Death rate')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot3.png')
-    return render_template('images.html', name = 'Evolution of Cases in USA', url ='static\\images\\new_plot3.png')
+    plt.savefig('static/images/new_plot3.png')
+    return render_template('images.html', name = 'Evolution of Cases in USA', url ='static/images/new_plot3.png')
 
 
 import matplotlib.dates as mdates
@@ -290,8 +290,8 @@ def covid_4():
     plot_evo((1,1), 'Death Rate', 'Death rate')
     plt.title('Evolution of cases in India')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot4.png')
-    return render_template('images.html', name = 'Evolution of Cases in India', url ='static\\images\\new_plot4.png')
+    plt.savefig('static/images/new_plot4.png')
+    return render_template('images.html', name = 'Evolution of Cases in India', url ='static/images/new_plot4.png')
 
 
 import matplotlib.dates as mdates
@@ -315,8 +315,8 @@ def covid_5():
     plot_evo((1, 1), 'Death Rate', 'Death rate')
     plt.title('Evolution of cases in China')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot5.png')
-    return render_template('images.html', name = 'Evolution of Cases in China', url ='static\\images\\new_plot5.png')
+    plt.savefig('static/images/new_plot5.png')
+    return render_template('images.html', name = 'Evolution of Cases in China', url ='static/images/new_plot5.png')
 
 
 import matplotlib.dates as mdates
@@ -340,8 +340,8 @@ def covid_6():
     plot_evo((1, 1), 'Death Rate', 'Death rate')
     plt.title('Evolution of cases in Italy')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot6.png')
-    return render_template('images.html', name = 'Evolution of Cases in Italy', url ='static\\images\\new_plot6.png')
+    plt.savefig('static/images/new_plot6.png')
+    return render_template('images.html', name = 'Evolution of Cases in Italy', url ='static/images/new_plot6.png')
 
 
 #Comparison of Confirmed Cases Since First Case
@@ -356,8 +356,8 @@ def covid_7():
     plt.grid(True)
     plt.title('Comparison of Confirmed Case Since First Case')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot7.png')
-    return render_template('images.html', name = 'Comparison of Confirmed cases', url ='static\\images\\new_plot7.png')
+    plt.savefig('static/images/new_plot7.png')
+    return render_template('images.html', name = 'Comparison of Confirmed cases', url ='static/images/new_plot7.png')
 
 # Comparison of Death cases Since First Case
 df_break = covid_19.groupby(['Country', 'days'])['Confirmed', 'Deaths'].sum().reset_index()
@@ -371,8 +371,8 @@ def covid_8():
     plt.grid(True)
     plt.title('Comparison of Death Since First Case')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot8.png')
-    return render_template('images.html', name = 'Comparison of Death Cases', url ='static\\images\\new_plot8.png')
+    plt.savefig('static/images/new_plot8.png')
+    return render_template('images.html', name = 'Comparison of Death Cases', url ='static/images/new_plot8.png')
 
 
 # Trajectory of first 10 countries with confirmed cases\
@@ -388,8 +388,8 @@ def covid_9():
     plt.grid(True)
     plt.title('Comparison of First 10 Countries with Confirmed Cases')
     plt.savefig(img)
-    plt.savefig('static\\images\\new_plot9.png')
-    return render_template('images.html', name = 'Comparison of top 10 countries with confirmed Cases', url ='static\\images\\new_plot9.png')
+    plt.savefig('static/images/new_plot9.png')
+    return render_template('images.html', name = 'Comparison of top 10 countries with confirmed Cases', url ='static/images/new_plot9.png')
 
 
 #covid 19
