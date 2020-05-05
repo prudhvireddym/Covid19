@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<title>Epidemic Diseases Analysis</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6,h7,h8,h9,h10 {font-family: "Raleway", sans-serif;  height: 100%;
+  margin: 0;}
+
+</style>
+<body class="w3-light-grey">
+
+
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-white " style="z-index:3;width:300px;" id="mySidebar"><br>
+<style>
+.collapsible{
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content{
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+</style>
+
+  <div class="w3-container">
+    <h5><b>COVID-19</b></h5><br>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+
+
+
+	<a href="http://127.0.0.1:5000/co19" class="w3-bar-item w3-button w3-padding-16 normal" style="background-color: #777;color: white; text-align: left;font-size: 15px;">15 MOST AFFECTED COUNTRIES</a>
+    <button href="http://127.0.0.1:5000/co19" type="button" class="w3-bar-item w3-button w3-padding-16 collapsible">EVOLUTION</button>
+	 <div class="content">
+        <a href="http://127.0.0.1:5000/co19_2" class="w3-bar-item w3-button">WORLD</a><br>
+        <a href="http://127.0.0.1:5000/co19_3" class="w3-bar-item w3-button">USA</a><br>
+        <a href="http://127.0.0.1:5000/co19_4" class="w3-bar-item w3-button">INDIA</a><br>
+        <a href="http://127.0.0.1:5000/co19_5" class="w3-bar-item w3-button">MAINLAND CHINA</a><br>
+        <a href="http://127.0.0.1:5000/co19_6" class="w3-bar-item w3-button">ITALY</a><br>
+	 </div>
+
+     <button href="http://127.0.0.1:5000/co19" type="button" class="w3-bar-item w3-button w3-padding-16 collapsible">OVERDATE</button>
+	 <div class="content">
+        <a href="http://127.0.0.1:5000/co19_27" class="w3-bar-item w3-button">CLOSED CASES</a><br>
+        <a href="http://127.0.0.1:5000/co19_28" class="w3-bar-item w3-button">ACTIVE CASES</a><br>
+	 </div>
+
+	<button href="http://127.0.0.1:5000/co19" type="button" class="w3-bar-item w3-button w3-padding-16 collapsible">WEEK-WISE ANALYSIS</button>
+	 <div class="content">
+        <a href="http://127.0.0.1:5000/co19_29" class="w3-bar-item w3-button">OVERALL PROGRESS</a><br>
+        <a href="http://127.0.0.1:5000/co19_30" class="w3-bar-item w3-button">CONFIRMED/DEATH CASES INCREASED</a><br>
+	 </div>
+
+	<button href="http://127.0.0.1:5000/co19" type="button" class="w3-bar-item w3-button w3-padding-16 collapsible">COMPARISON</button>
+	 <div class="content">
+        <a href="http://127.0.0.1:5000/co19_7" class="w3-bar-item w3-button">CONFIRMED CASES</a><br>
+        <a href="http://127.0.0.1:5000/co19_8" class="w3-bar-item w3-button">DEATH CASES</a><br>
+        <a href="http://127.0.0.1:5000/co19_9" class="w3-bar-item w3-button">TOP 10 CONFIRMED COUNTRIES</a><br>
+	 </div>
+
+
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+
+ <header class="w3-container w3-theme" id="myHeader" >
+
+  <div class="w3-center" style="backdrop-filter: blur(8px); background-position: center; background-repeat: no-repeat; background-size: cover; background-image: url(https://lmg-labmanager.s3.amazonaws.com/assets/articleNo/22021/aImg/40702/novel-coronavirus-illustration-m.png);">
+  <div class="w3-padding-32">
+  <h1 class="w3-xxxlarge w3-animate-bottom" style ="color:white"><b>Analysis of Epidemic Diseases</b></h1>
+  <h4 style ="color:white"><b>COVID-19, EBOLA, SARS, H1N1</b></h4>
+    </div>
+  </div>
+ </header>
+
+  <!-- Header -->
+  <header class="w3-container">
+    <h5><b><i></i> My Dashboard</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+
+        <div class="w3-right">
+        </div>
+        <div class="w3-clear"></div>
+        <h5>COVID-19</h5>
+        <a href="http://127.0.0.1:5000/co19_10">Confirmed Cases Map</a><br>
+		<a href="http://127.0.0.1:5000/co19_11">Death Cases Map</a><br>
+		<a href="http://127.0.0.1:5000/co19_12">Confirmed Cases Treemap</a><br>
+		<a href="http://127.0.0.1:5000/co19_13">Death Cases Treemap</a><br>
+
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-right">
+        </div>
+        <div class="w3-clear"></div>
+        <h5>EBOLA</h5>
+        <a href="http://127.0.0.1:5000/co19_14">Confirmed Cases Map</a><br>
+		<a href="http://127.0.0.1:5000/co19_15">Death Cases Map</a><br>
+		<a href="http://127.0.0.1:5000/co19_16">Confirmed Cases Treemap</a><br>
+		<a href="http://127.0.0.1:5000/co19_17">Death Cases Treemap</a><br>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-right">
+
+        </div>
+        <div class="w3-clear"></div>
+        <h5>SARS</h5>
+		<a href="http://127.0.0.1:5000/co19_18">Confirmation cases Map</a><br>
+		<a href="http://127.0.0.1:5000/co19_19">Death Cases Map</a><br>
+		<a href="http://127.0.0.1:5000/co19_20">Confirmed Cases Treemap</a><br>
+		<a href="http://127.0.0.1:5000/co19_21">Death Cases Treemap</a><br>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-right">
+        </div>
+        <div class="w3-clear"></div>
+        <h5>H1N1</h5>
+        <a href="http://127.0.0.1:5000/co19_22">Confirmed and Death Cases</a><br><br><br><br>
+      </div>
+    </div>
+  </div>
+
+      <div class="w3-row-padding w3-margin-bottom w3-padding-16">
+        <h4 style="text-indent:10px"><b>  Comparison of all Diseases:</b></h4>
+        <div class="w3-row-padding w3-margin-bottom">
+        <table class="w3-table w3-striped w3-white" >
+          <tr>
+            <td>1.</td>
+            <td height="50"><a href="http://127.0.0.1:5000/co19_23">Number of Cases</a><br></td>
+          </tr>
+          <tr>
+            <td>2.</td>
+            <td height="50"><a href="http://127.0.0.1:5000/co19_24">Number of Death</a><br></td>
+          </tr>
+          <tr>
+            <td>3.</td>
+            <td height="50"><a href="http://127.0.0.1:5000/co19_25">Mortality rate</a><br></td>
+          </tr>
+          <tr>
+            <td>4.</td>
+            <td height="50"><a href="http://127.0.0.1:5000/co19_25">Number of Affected countries</a><br></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+
+
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-16 w3-light-grey" style="height: 200px">
+  
+  <div style="background-color: MidnightBlue">
+    <p style="color: white; text-align: left"><small><b> Under the guidance of:</b>
+     <span style="float:right;">
+    <b>Developed by:</b></span>
+    </small>
+    </p>
+    <p style="color: white; text-align: left "><small>
+    <b>Dr. Baek-Young Choi, Ph.D.</b>
+    <span style="float:right;">
+    Vishnu Vardhan Manne</span>
+    <br> 
+    
+    Associate Professor
+     <span style="float:right;">
+    Sai Haneesh Tanneru </span><br>
+    Department of Computer Science & Electrical Engineering
+     <span style="float:right;">
+    Sai Jaswanth Gattidi</span><br>
+    University of Missouri - Kansas City
+     <span style="float:right;">
+    Vandith Thotla</span><br>
+    </small></p>
+   
+
+  </footer>
+  
+ 
+  <!-- End page content -->
+
+</div>
+</body>
+</html>
